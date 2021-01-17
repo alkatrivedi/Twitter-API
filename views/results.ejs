@@ -1,0 +1,19 @@
+<h1>Results Page!</h1>
+
+<ul>
+    <% data.forEach(function(tweet){ %>
+        <div class="row">
+            <div class="col" style="border: 3px solid black; margin-bottom: 10px; padding: 10px;">
+                <h4>Date: </h4><%= tweet.created_at %>
+                <h4>Tweet Desc: </h4>
+                <p><%= tweet.text %></p>
+                <h4>Username: </h4><%= tweet.user.name %>
+                <h4>Location: </h4><%= tweet.user.location %>
+                <h4>Timezone</h4><%= tweet.user.time_zone %>
+                <h4>Retweet Count: </h4><%= tweet.retweet_count %>
+            </div>
+        </div>
+    <% }); %>
+</ul>
+
+<a href="/">Search Again</a>
